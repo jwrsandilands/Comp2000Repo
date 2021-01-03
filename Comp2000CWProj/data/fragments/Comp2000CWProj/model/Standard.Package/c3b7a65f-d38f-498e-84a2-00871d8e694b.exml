@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="comp2000cwproj" version="4">
+  <OBJECT>
+    <ID name="comp2000cwproj" mc="Standard.Package" uid="c3b7a65f-d38f-498e-84a2-00871d8e694b"/>
+    <PID name="Comp2000CWProj" mc="Standard.Project" uid="ab5e77df-68a1-4a1c-81f7-d9a656655b94"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[comp2000cwproj]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="ScanView" mc="Standard.Class" uid="b12d4dfc-0e12-479f-b060-8d99edd619d2"/>
+        <COMPID name="IKioskView" mc="Standard.Interface" uid="faebfb42-95c1-4d06-acc1-55c1adf39609"/>
+        <COMPID name="IAdminView" mc="Standard.Interface" uid="94e898c3-7744-4ee3-be40-e7b0887477b7"/>
+        <COMPID name="IKioskReceipt" mc="Standard.Interface" uid="985fb91f-8d2e-40b7-a317-c2be61c05841"/>
+        <COMPID name="PayView" mc="Standard.Class" uid="a6e1e3f0-0292-400e-ba11-d8f4f7858690"/>
+        <COMPID name="LoginView" mc="Standard.Class" uid="fea0cc56-77a0-48c7-8aa4-7ce2c2eb64fa"/>
+        <COMPID name="StockView" mc="Standard.Class" uid="78af6f28-51f6-4606-be07-4f325ba80890"/>
+        <COMPID name="OrderView" mc="Standard.Class" uid="2a18ec05-2310-4bf4-bd82-7c367e302970"/>
+        <COMPID name="AdminView" mc="Standard.Class" uid="bc07adaa-e072-453b-9d1d-60d58dd4d230"/>
+        <COMPID name="KioskView" mc="Standard.Class" uid="16659541-2bf7-4c5d-995b-ae247a9cbe25"/>
+        <COMPID name="Class" mc="Standard.Class" uid="08ab0958-d2c2-4389-8a19-3547e8c08e5e"/>
+        <COMPID name="Controller" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
+        <COMPID name="Model(Observable)" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
+        <COMPID name="StratA" mc="Standard.Class" uid="6e40f805-7848-4606-85a4-6bec5604d7cb"/>
+        <COMPID name="StratB" mc="Standard.Class" uid="6e783fd8-cae7-43ac-be52-8074eb2aaf1b"/>
+        <COMPID name="ConcreteModel" mc="Standard.Class" uid="591bc02a-ac72-4aea-a2ec-4d53f1efb164"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Product">
+        <COMPID name="comp2000cwproj Class diagram" mc="Standard.ClassDiagram" uid="dfb6ad61-63fc-4f1e-b8a1-21d30c669e60"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
