@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="StockView" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FetchStock" version="4">
   <OBJECT>
-    <ID name="StockView" mc="Standard.Class" uid="78af6f28-51f6-4606-be07-4f325ba80890"/>
+    <ID name="FetchStock" mc="Standard.Class" uid="004b1def-2148-4c47-b469-e5df41f069b6"/>
     <PID name="comp2000cwproj" mc="Standard.Package" uid="c3b7a65f-d38f-498e-84a2-00871d8e694b"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[StockView]]></ATT>
+      <ATT name="Name"><![CDATA[FetchStock]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="stockController" mc="Standard.AssociationEnd" uid="79c174aa-5da9-4b5a-99b4-2a3d2a464f43"/>
+          <ID name="observableDB" mc="Standard.AssociationEnd" uid="8dc68b50-20eb-4001-b192-369feaefb116"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -30,16 +30,16 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[stockController]]></ATT>
+            <ATT name="Name"><![CDATA[observableDB]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="StockController" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
+              <ID name="ObservableDB" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="52f85251-0fec-4a2f-bb22-80d02de3f801"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="4c26b1f2-c3ae-4f3e-b662-f221ac71c939"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -57,11 +57,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="stockController" mc="Standard.AssociationEnd" uid="79c174aa-5da9-4b5a-99b4-2a3d2a464f43"/>
+                    <COMPID name="observableDB" mc="Standard.AssociationEnd" uid="8dc68b50-20eb-4001-b192-369feaefb116"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="b880de8e-d46a-4821-bc99-6964e3fad466"/>
+                      <ID name="" mc="Standard.Association" uid="045d26b3-37e3-4f40-b7dc-e37654ad8696"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -73,22 +73,21 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="b880de8e-d46a-4821-bc99-6964e3fad466"/>
+              <COMPID name="" mc="Standard.Association" uid="045d26b3-37e3-4f40-b7dc-e37654ad8696"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <COMP relation="Parent">
+      <COMP relation="Realized">
         <OBJECT>
-          <ID name="Generalization" mc="Standard.Generalization" uid="a4824c41-b201-4743-9936-2fe01cc5d832"/>
+          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="bedf594d-ebc6-47a8-8ffd-3b79101f5d87"/>
           <ATTRIBUTES>
-            <ATT name="Discriminator"></ATT>
-            <ATT name="Name"><![CDATA[Generalization]]></ATT>
+            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="SuperType">
-              <ID name="AdminView" mc="Standard.Class" uid="bc07adaa-e072-453b-9d1d-60d58dd4d230"/>
+            <LINK relation="Implemented">
+              <ID name="StockController" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

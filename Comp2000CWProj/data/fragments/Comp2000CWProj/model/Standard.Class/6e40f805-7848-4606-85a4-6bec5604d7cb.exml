@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="StratA" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="AddStock" version="4">
   <OBJECT>
-    <ID name="StratA" mc="Standard.Class" uid="6e40f805-7848-4606-85a4-6bec5604d7cb"/>
+    <ID name="AddStock" mc="Standard.Class" uid="6e40f805-7848-4606-85a4-6bec5604d7cb"/>
     <PID name="comp2000cwproj" mc="Standard.Package" uid="c3b7a65f-d38f-498e-84a2-00871d8e694b"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[StratA]]></ATT>
+      <ATT name="Name"><![CDATA[AddStock]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="model(Observable)" mc="Standard.AssociationEnd" uid="2ce91041-e126-4c7e-a043-a807e5e321dc"/>
+          <ID name="observableDB" mc="Standard.AssociationEnd" uid="b93f4f63-776e-4fc7-b0a6-99fe6da9428a"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -30,16 +30,16 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[model(Observable)]]></ATT>
+            <ATT name="Name"><![CDATA[observableDB]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="Model(Observable)" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
+              <ID name="ObservableDB" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="3958b508-0a37-44b3-9a33-2b3cbd931264"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="ede770c9-39dc-4817-a66e-8c0ab69d0756"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -57,11 +57,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="model(Observable)" mc="Standard.AssociationEnd" uid="2ce91041-e126-4c7e-a043-a807e5e321dc"/>
+                    <COMPID name="observableDB" mc="Standard.AssociationEnd" uid="b93f4f63-776e-4fc7-b0a6-99fe6da9428a"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="40c0ec01-616c-47f0-9957-344ab54d46ea"/>
+                      <ID name="" mc="Standard.Association" uid="3a036ed0-c5e8-4500-8e45-9f3d34dbac6e"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -73,7 +73,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="40c0ec01-616c-47f0-9957-344ab54d46ea"/>
+              <COMPID name="" mc="Standard.Association" uid="3a036ed0-c5e8-4500-8e45-9f3d34dbac6e"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -87,7 +87,7 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Implemented">
-              <ID name="Controller" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
+              <ID name="StockController" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

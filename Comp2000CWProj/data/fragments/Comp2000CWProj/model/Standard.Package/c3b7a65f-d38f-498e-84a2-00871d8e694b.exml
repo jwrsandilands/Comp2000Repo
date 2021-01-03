@@ -24,12 +24,13 @@
         <COMPID name="OrderView" mc="Standard.Class" uid="2a18ec05-2310-4bf4-bd82-7c367e302970"/>
         <COMPID name="AdminView" mc="Standard.Class" uid="bc07adaa-e072-453b-9d1d-60d58dd4d230"/>
         <COMPID name="KioskView" mc="Standard.Class" uid="16659541-2bf7-4c5d-995b-ae247a9cbe25"/>
-        <COMPID name="Class" mc="Standard.Class" uid="08ab0958-d2c2-4389-8a19-3547e8c08e5e"/>
-        <COMPID name="Controller" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
-        <COMPID name="Model(Observable)" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
-        <COMPID name="StratA" mc="Standard.Class" uid="6e40f805-7848-4606-85a4-6bec5604d7cb"/>
-        <COMPID name="StratB" mc="Standard.Class" uid="6e783fd8-cae7-43ac-be52-8074eb2aaf1b"/>
-        <COMPID name="ConcreteModel" mc="Standard.Class" uid="591bc02a-ac72-4aea-a2ec-4d53f1efb164"/>
+        <COMPID name="StockController" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
+        <COMPID name="ObservableDB" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
+        <COMPID name="AddStock" mc="Standard.Class" uid="6e40f805-7848-4606-85a4-6bec5604d7cb"/>
+        <COMPID name="RemoveStock" mc="Standard.Class" uid="6e783fd8-cae7-43ac-be52-8074eb2aaf1b"/>
+        <COMPID name="ConcreteDB" mc="Standard.Class" uid="591bc02a-ac72-4aea-a2ec-4d53f1efb164"/>
+        <COMPID name="EditStock" mc="Standard.Class" uid="97d054f5-bcbe-410c-9103-7172b6970ced"/>
+        <COMPID name="FetchStock" mc="Standard.Class" uid="004b1def-2148-4c47-b469-e5df41f069b6"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
