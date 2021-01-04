@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="90c078be-209d-439d-8b17-aa461905a0cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.dbf.0" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.dbf.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.dbf.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.dbf.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.dbr.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.dbr.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.idf.0" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.idf.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.idf.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.idf.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.idr.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/.runtime/fragments/Comp2000CWProj/.index/index.idr.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/admin/stamp.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/admin/stamp.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/004b1def-2148-4c47-b469-e5df41f069b6.exml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/2a18ec05-2310-4bf4-bd82-7c367e302970.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/2a18ec05-2310-4bf4-bd82-7c367e302970.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/591bc02a-ac72-4aea-a2ec-4d53f1efb164.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/591bc02a-ac72-4aea-a2ec-4d53f1efb164.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/6e40f805-7848-4606-85a4-6bec5604d7cb.exml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/6e783fd8-cae7-43ac-be52-8074eb2aaf1b.exml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/78af6f28-51f6-4606-be07-4f325ba80890.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/78af6f28-51f6-4606-be07-4f325ba80890.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/97d054f5-bcbe-410c-9103-7172b6970ced.exml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/a6e1e3f0-0292-400e-ba11-d8f4f7858690.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/a6e1e3f0-0292-400e-ba11-d8f4f7858690.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/b12d4dfc-0e12-479f-b060-8d99edd619d2.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/b12d4dfc-0e12-479f-b060-8d99edd619d2.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/fea0cc56-77a0-48c7-8aa4-7ce2c2eb64fa.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Class/fea0cc56-77a0-48c7-8aa4-7ce2c2eb64fa.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.ClassDiagram/dfb6ad61-63fc-4f1e-b8a1-21d30c669e60.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.ClassDiagram/dfb6ad61-63fc-4f1e-b8a1-21d30c669e60.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Interface/4f7006d4-efec-4046-bd8a-c1ab5d7e390d.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Interface/4f7006d4-efec-4046-bd8a-c1ab5d7e390d.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Interface/97aa08b3-9988-4590-a040-a50f24d5721f.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Interface/97aa08b3-9988-4590-a040-a50f24d5721f.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Package/c3b7a65f-d38f-498e-84a2-00871d8e694b.exml" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/fragments/Comp2000CWProj/model/Standard.Package/c3b7a65f-d38f-498e-84a2-00871d8e694b.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.dbf.0" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.dbf.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.dbf.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.dbf.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.dbr.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.dbr.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idf.0" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idf.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idf.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idf.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idr.0" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idr.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idr.t" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/data/localmodel/localmodel.idr.t" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comp2000CWProj/src/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/Comp2000CWProj/src/AdminView.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mbuvgmX9Ov0IrOOo2IRUrfI9LB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90c078be-209d-439d-8b17-aa461905a0cd" name="Default Changelist" comment="" />
+      <created>1609774844796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609774844796</updated>
+      <workItem from="1609774846472" duration="45000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

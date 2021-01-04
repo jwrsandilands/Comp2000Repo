@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ObservableDB" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="IObservableModel" version="4">
   <OBJECT>
-    <ID name="ObservableDB" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
+    <ID name="IObservableModel" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
     <PID name="comp2000cwproj" mc="Standard.Package" uid="c3b7a65f-d38f-498e-84a2-00871d8e694b"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
@@ -9,7 +9,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[ObservableDB]]></ATT>
+      <ATT name="Name"><![CDATA[IObservableModel]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
