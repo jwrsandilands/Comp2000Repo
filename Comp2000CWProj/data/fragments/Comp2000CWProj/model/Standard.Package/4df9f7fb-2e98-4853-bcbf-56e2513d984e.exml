@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CWModel" version="4">
+  <OBJECT>
+    <ID name="CWModel" mc="Standard.Package" uid="4df9f7fb-2e98-4853-bcbf-56e2513d984e"/>
+    <PID name="com" mc="Standard.Package" uid="c2f7421c-8015-4355-a7fe-581e9e5c4fa3"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[CWModel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Controller" mc="Standard.Class" uid="d9081d13-d4a2-4db3-a47a-59e388138a21"/>
+        <COMPID name="AdminView" mc="Standard.Class" uid="538080d8-df9b-40d8-933f-d1725fd23752"/>
+        <COMPID name="IView" mc="Standard.Interface" uid="c0973116-61e4-4b0f-b710-be50d2a61f49"/>
+        <COMPID name="KioskView" mc="Standard.Class" uid="32318b54-4993-4939-98e2-52710c81b12c"/>
+        <COMPID name="StockView" mc="Standard.Class" uid="7967e818-4c8d-492e-8cc2-8062e29f6150"/>
+        <COMPID name="OrderView" mc="Standard.Class" uid="0e5846d5-e9c6-497b-a91b-b15825322a36"/>
+        <COMPID name="LoginView" mc="Standard.Class" uid="47585a2f-cedd-46c2-a974-4020c2122417"/>
+        <COMPID name="IModelSubject" mc="Standard.Interface" uid="673e0fa2-8f9b-4423-bf24-1fe1e1612d7a"/>
+        <COMPID name="Model" mc="Standard.Class" uid="6d78e838-67de-4194-aeed-d05989abf42b"/>
+        <COMPID name="IModelObserver" mc="Standard.Interface" uid="08dfbfb5-54ea-453c-9399-ebb9ca2f454c"/>
+        <COMPID name="IUserController" mc="Standard.Interface" uid="8970be1d-db1a-48ca-9076-2967548230fd"/>
+        <COMPID name="ReceiptView" mc="Standard.Class" uid="93ead709-eda0-4b06-ab02-9e8abc31ce9c"/>
+        <COMPID name="IAdminController" mc="Standard.Interface" uid="7c245a3c-91b2-4f05-a1df-9dfe269cacb3"/>
+        <COMPID name="PayView" mc="Standard.Class" uid="8ae7abfc-b5b5-44f4-9639-5b53c9964468"/>
+        <COMPID name="ScanView" mc="Standard.Class" uid="7030d9ec-108b-492b-beca-e71e4aa9ad4c"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Controller" version="4">
   <OBJECT>
-    <ID name="Controller" mc="Standard.Class" uid="21015de4-ea32-49c9-9ec4-2c5f05dfd8f1"/>
-    <PID name="comp2000cwproj" mc="Standard.Package" uid="c3b7a65f-d38f-498e-84a2-00871d8e694b"/>
+    <ID name="Controller" mc="Standard.Class" uid="d9081d13-d4a2-4db3-a47a-59e388138a21"/>
+    <PID name="CWModel" mc="Standard.Package" uid="4df9f7fb-2e98-4853-bcbf-56e2513d984e"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -17,15 +17,15 @@
     <DEPENDENCIES>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="iModelSubject" mc="Standard.AssociationEnd" uid="0692baa8-e694-478f-af94-c81e95f97e55"/>
+          <ID name="iModelSubject" mc="Standard.AssociationEnd" uid="d6475e0a-fb3a-407a-85a1-5ae1f1a477fa"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
@@ -35,72 +35,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="IModelSubject" mc="Standard.Interface" uid="3478e11f-eec3-40b5-ab49-b79ad389ea47"/>
+              <ID name="IModelSubject" mc="Standard.Interface" uid="673e0fa2-8f9b-4423-bf24-1fe1e1612d7a"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="2733b748-d0a9-4d7c-af8d-c44a0dd06ea6"/>
-                <ATTRIBUTES>
-                  <ATT name="Aggregation">KindIsAssociation</ATT>
-                  <ATT name="IsChangeable">true</ATT>
-                  <ATT name="Changeable">ReadWrite</ATT>
-                  <ATT name="IsDerived">false</ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
-                  <ATT name="Visibility">Public</ATT>
-                  <ATT name="IsClass">false</ATT>
-                  <ATT name="IsAbstract">false</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Opposite">
-                    <COMPID name="iModelSubject" mc="Standard.AssociationEnd" uid="0692baa8-e694-478f-af94-c81e95f97e55"/>
-                  </COMP>
-                  <COMP relation="Association">
-                    <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="92d86c5d-b9b9-4761-9660-dd09d3d06f47"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="92d86c5d-b9b9-4761-9660-dd09d3d06f47"/>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="iView" mc="Standard.AssociationEnd" uid="3d979724-4afa-4400-b0be-98085dfa1eb9"/>
-          <ATTRIBUTES>
-            <ATT name="Aggregation">KindIsAssociation</ATT>
-            <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[iView]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="IView" mc="Standard.Interface" uid="3b381bec-3593-436e-a3ec-4d2b4fef8925"/>
-            </LINK>
-            <COMP relation="Opposite">
-              <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="3c13983a-22ab-4562-a66c-55724abf13d0"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="6d54d7a9-c2a5-415b-b908-12300250f6e6"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -118,11 +57,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="iView" mc="Standard.AssociationEnd" uid="3d979724-4afa-4400-b0be-98085dfa1eb9"/>
+                    <COMPID name="iModelSubject" mc="Standard.AssociationEnd" uid="d6475e0a-fb3a-407a-85a1-5ae1f1a477fa"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="9df98da4-0939-4de8-ad1c-f11bca2a69fa"/>
+                      <ID name="" mc="Standard.Association" uid="03db3ff4-fea0-4202-8e52-6748bb2039f9"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -134,45 +73,134 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="9df98da4-0939-4de8-ad1c-f11bca2a69fa"/>
+              <COMPID name="" mc="Standard.Association" uid="03db3ff4-fea0-4202-8e52-6748bb2039f9"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="71d594d4-b298-4f65-bc6d-ba1ee3bf63e1"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="iView" mc="Standard.AssociationEnd" uid="de0c6c3f-c44b-4e9c-838b-6f9ab5ab58d5"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[iView]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="IView" mc="Standard.Interface" uid="c0973116-61e4-4b0f-b710-be50d2a61f49"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="Standard.AssociationEnd" uid="99c724a8-9c3c-4dcb-9644-3c9ddf0f3910"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="iView" mc="Standard.AssociationEnd" uid="de0c6c3f-c44b-4e9c-838b-6f9ab5ab58d5"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Standard.Association" uid="9697fcb5-1005-49d4-a531-1c5903513038"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Standard.Association" uid="9697fcb5-1005-49d4-a531-1c5903513038"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="ca8aa615-e985-460e-9de2-dc5fdc5be8e5"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="Realized">
         <OBJECT>
-          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="d4aceff6-0e62-483a-aa46-b3a955afc458"/>
+          <ID name="" mc="Standard.InterfaceRealization" uid="4fb3b832-7a14-43bb-93be-3893468a668c"/>
           <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
+            <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Implemented">
-              <ID name="IAdminController" mc="Standard.Interface" uid="e973540a-2dae-4f6f-b5e9-df5675a0bbb5"/>
+              <ID name="IAdminController" mc="Standard.Interface" uid="7c245a3c-91b2-4f05-a1df-9dfe269cacb3"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="d3d9a559-020f-45b1-aa27-f5ac94b3269a"/>
+          <ID name="" mc="Standard.InterfaceRealization" uid="4e6e7637-9571-448a-8212-c8a0a7c001a1"/>
           <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
+            <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Implemented">
-              <ID name="IUserController" mc="Standard.Interface" uid="c94fb95d-a71f-4048-993f-587bcea76263"/>
+              <ID name="IUserController" mc="Standard.Interface" uid="8970be1d-db1a-48ca-9076-2967548230fd"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="4c45d75a-e5d9-4d8e-83b7-1302712f1dfc"/>
+          <ID name="" mc="Standard.InterfaceRealization" uid="707cd6b5-92ec-4f5e-9222-7e6cb5f688ed"/>
           <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
+            <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Implemented">
-              <ID name="IModelObserver" mc="Standard.Interface" uid="87933e20-eeb3-4ab8-b542-0074b992d1e2"/>
+              <ID name="IModelObserver" mc="Standard.Interface" uid="08dfbfb5-54ea-453c-9399-ebb9ca2f454c"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

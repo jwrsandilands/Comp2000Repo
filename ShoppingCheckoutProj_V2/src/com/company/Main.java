@@ -1,9 +1,38 @@
 package com.company;
 
+import com.CWProgram.View.AdminView.AdminView;
+import com.CWProgram.View.AdminView.LoginView;
+import com.CWProgram.View.AdminView.OrderView;
+import com.CWProgram.View.AdminView.StockView;
+import com.CWProgram.Controller.Controller;
+import com.CWProgram.Controller.IAdminController;
+import com.CWProgram.Controller.IUserController;
+import com.CWProgram.View.KioskView.KioskView;
+import com.CWProgram.View.KioskView.PayView;
+import com.CWProgram.View.KioskView.ScanView;
+import com.CWProgram.Model.IModelSubject;
+import com.CWProgram.Model.Model;
+
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int simple = 1;
+
+        IModelSubject model = new Model();
+
+        AdminView adminLoginView = new LoginView();
+        IAdminController adminLoginControl = new Controller(model, adminLoginView);
+
+        AdminView adminStockView = new StockView();
+        IAdminController adminStockControl = new Controller(model, adminStockView);
+
+        AdminView adminOrderView = new OrderView();
+        IAdminController adminOrderControl = new Controller(model, adminOrderView);
+
+        KioskView kisokScanView = new ScanView();
+        IUserController kioskScanControl = new Controller(model, kisokScanView);
+
+        KioskView kioskPayView = new PayView();
+        IUserController kioskPayControl = new Controller(model, kisokScanView);
     }
 }
