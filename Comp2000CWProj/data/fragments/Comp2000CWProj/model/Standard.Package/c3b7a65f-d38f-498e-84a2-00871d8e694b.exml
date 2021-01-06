@@ -14,21 +14,21 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="ScanView" mc="Standard.Class" uid="b12d4dfc-0e12-479f-b060-8d99edd619d2"/>
-        <COMPID name="IKioskView" mc="Standard.Interface" uid="faebfb42-95c1-4d06-acc1-55c1adf39609"/>
-        <COMPID name="IAdminView" mc="Standard.Interface" uid="94e898c3-7744-4ee3-be40-e7b0887477b7"/>
-        <COMPID name="IKioskReceipt" mc="Standard.Interface" uid="985fb91f-8d2e-40b7-a317-c2be61c05841"/>
-        <COMPID name="PayView" mc="Standard.Class" uid="a6e1e3f0-0292-400e-ba11-d8f4f7858690"/>
-        <COMPID name="LoginView" mc="Standard.Class" uid="fea0cc56-77a0-48c7-8aa4-7ce2c2eb64fa"/>
-        <COMPID name="StockView" mc="Standard.Class" uid="78af6f28-51f6-4606-be07-4f325ba80890"/>
-        <COMPID name="OrderView" mc="Standard.Class" uid="2a18ec05-2310-4bf4-bd82-7c367e302970"/>
-        <COMPID name="AdminView" mc="Standard.Class" uid="bc07adaa-e072-453b-9d1d-60d58dd4d230"/>
-        <COMPID name="KioskView" mc="Standard.Class" uid="16659541-2bf7-4c5d-995b-ae247a9cbe25"/>
-        <COMPID name="IDataController" mc="Standard.Interface" uid="4f7006d4-efec-4046-bd8a-c1ab5d7e390d"/>
-        <COMPID name="IObservableModel" mc="Standard.Interface" uid="97aa08b3-9988-4590-a040-a50f24d5721f"/>
-        <COMPID name="ConcreteModel" mc="Standard.Class" uid="591bc02a-ac72-4aea-a2ec-4d53f1efb164"/>
-        <COMPID name="AdminController" mc="Standard.Class" uid="438e3f4e-ea0a-4b51-837e-25a856765929"/>
-        <COMPID name="ClientController" mc="Standard.Class" uid="0b43ed96-026f-4c08-beda-d47e31dc17e1"/>
+        <COMPID name="LoginView" mc="Standard.Class" uid="a676d347-f411-4efe-b31c-1f2377fbe8e4"/>
+        <COMPID name="StockView" mc="Standard.Class" uid="ba37c86d-a9c4-47d2-a020-67dd3cc010cd"/>
+        <COMPID name="OrderView" mc="Standard.Class" uid="be852214-15b3-426a-a06a-3928a17370a1"/>
+        <COMPID name="AdminView" mc="Standard.Class" uid="50f2dbdd-abb0-453c-a77d-9061891ae5fe"/>
+        <COMPID name="KioskView" mc="Standard.Class" uid="1cc86885-d441-4539-9c85-85af0d9cf9f8"/>
+        <COMPID name="ScanView" mc="Standard.Class" uid="8e4464ae-2af8-4ce9-a91b-70c7a9887da9"/>
+        <COMPID name="PayView" mc="Standard.Class" uid="eb76f742-7cdf-4c79-9127-809dd03f43fe"/>
+        <COMPID name="IView" mc="Standard.Interface" uid="3b381bec-3593-436e-a3ec-4d2b4fef8925"/>
+        <COMPID name="Controller" mc="Standard.Class" uid="21015de4-ea32-49c9-9ec4-2c5f05dfd8f1"/>
+        <COMPID name="IAdminController" mc="Standard.Interface" uid="e973540a-2dae-4f6f-b5e9-df5675a0bbb5"/>
+        <COMPID name="IUserController" mc="Standard.Interface" uid="c94fb95d-a71f-4048-993f-587bcea76263"/>
+        <COMPID name="IModelObserver" mc="Standard.Interface" uid="87933e20-eeb3-4ab8-b542-0074b992d1e2"/>
+        <COMPID name="IModelSubject" mc="Standard.Interface" uid="3478e11f-eec3-40b5-ab49-b79ad389ea47"/>
+        <COMPID name="Model" mc="Standard.Class" uid="d7185f15-e189-4753-9ea8-d04e732ddc47"/>
+        <COMPID name="ReceiptView" mc="Standard.Class" uid="ec36efcc-9c61-4813-a703-d387b90cc1b0"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
