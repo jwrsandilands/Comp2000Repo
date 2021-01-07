@@ -31,6 +31,7 @@
         <COMPID name="ReceiptView" mc="Standard.Class" uid="ec36efcc-9c61-4813-a703-d387b90cc1b0"/>
         <COMPID name="com" mc="Standard.Package" uid="c2f7421c-8015-4355-a7fe-581e9e5c4fa3"/>
         <COMPID name="ModelStockEntry" mc="Standard.Class" uid="bc4be106-397f-46b2-8e3a-a8f698a6ef3d"/>
+        <COMPID name="ModelAdminDataEntry" mc="Standard.Class" uid="960f1eae-4ec8-41b7-a97d-be5bc47b7add"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

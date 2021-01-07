@@ -22,7 +22,7 @@ public class Main {
 
         IModelSubject model = new Model();
         try{
-            Method method = model.getClass().getMethod("loadStock");
+            Method method = model.getClass().getMethod("loadAdmins");
             method.invoke(model);
         }
         catch(Exception ex){

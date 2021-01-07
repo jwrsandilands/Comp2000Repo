@@ -10,10 +10,12 @@ import java.util.Scanner;
 public class Model implements IModelSubject {
     public List<IModelObserver> iModelObserver = new ArrayList<IModelObserver> ();
     private final ArrayList<ModelStockEntry> stockTable = new ArrayList<ModelStockEntry>();
+    private final ArrayList<ModelAdminDataEntry> adminTable = new ArrayList<ModelAdminDataEntry>();
 
     //establish variables
-    public String seperator = "\\|";
+    public String separator = "\\|";
     public String stockDataFilePath = "Resources\\StockData";
+    public String adminDataFilePath = "Resources\\AdminData";
 
 
     //set observer
@@ -33,7 +35,7 @@ public class Model implements IModelSubject {
                 String data = stockScanner.nextLine();
 
                 //breaks line data into an array
-                String[] stockTableData = data.split(seperator);
+                String[] stockTableData = data.split(separator);
 
                 //sets up the table to insert information into
                 ModelStockEntry stockEntry = new ModelStockEntry();
@@ -61,10 +63,48 @@ public class Model implements IModelSubject {
             }
             stockScanner.close();
 
-            System.out.println("Import Successful!");
+            System.out.println("Stock Import Successful!");
         }
         catch (FileNotFoundException e){
-            System.out.println("Import unsuccessful...");
+            System.out.println("Stock Import Unsuccessful... \n please check file location and properties.");
+            e.printStackTrace();
+        }
+    }
+
+    //read admin file
+    public void loadAdmins(){
+        try{
+            File adminData = new File(adminDataFilePath);
+
+            Scanner adminScanner = new Scanner(adminData);
+            while (adminScanner.hasNextLine()) {
+                //scans the next line to scan
+                String data = adminScanner.nextLine();
+
+                //breaks line data into an array
+                String[] adminTableData = data.split(separator);
+
+                //sets up the table to insert information into
+                ModelAdminDataEntry adminEntry = new ModelAdminDataEntry();
+
+                //Sets Admin ID
+                int accountNumberToInt = Integer.parseInt(adminTableData[0]);
+                adminEntry.setAccountNumber(accountNumberToInt);
+
+                //Sets username
+                adminEntry.setUsername(adminTableData[1]);
+
+                //Sets password
+                adminEntry.setPassword(adminTableData[2]);
+
+                adminTable.add(adminEntry);
+            }
+            adminScanner.close();
+
+            System.out.println("Admin Import Successful!");
+        }
+        catch(FileNotFoundException e){
+            System.out.println("Admin Import Unsuccessful... \n please check file location and properties.");
             e.printStackTrace();
         }
     }
