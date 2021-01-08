@@ -13,22 +13,68 @@ public class ScanView extends KioskView {
     JButton startBtn, adminBtn;
 
     EmptyBorder mainBorder;
-    Dimension btnSize = new Dimension(80, 30);
+
 
     public ScanView(){
         mainPanel = new JPanel();
         promptTxt = new JLabel("Press the Button to Start!");
+        promptTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
         startBtn = new JButton("Start");
-        adminBtn = new JButton("Admin Log In");
-        adminBtn.setPreferredSize(btnSize);
+        adminBtn = new JButton("Admin Login");
+
 
 
         mainBorder = new EmptyBorder(10,10,10,10);
-
         mainPanel.setBorder(mainBorder);
-        mainPanel.add(adminBtn, BorderLayout.CENTER);
+
+        //manipulate gridlayout shape
+        {
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(promptTxt);
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(startBtn);
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+
+            mainPanel.add(adminBtn);
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+            mainPanel.add(new JLabel());
+        }
+
+
         setContentPane(mainPanel);
-        initialiseBorder();
+        initialise(7,5);
     }
 
 

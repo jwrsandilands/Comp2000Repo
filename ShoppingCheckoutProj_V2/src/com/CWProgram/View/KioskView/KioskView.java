@@ -9,10 +9,10 @@ import java.awt.*;
 public abstract class KioskView extends JFrame implements IView {
     protected Controller controller;
 
-    protected void initialiseBorder(){
-        this.setLayout(new BorderLayout());
+    protected void initialise(int rows, int cols){
+        this.setLayout(new GridLayout(rows,cols,1,1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setPreferredSize(new Dimension(900,900));
+        this.setPreferredSize(new Dimension(1500,900));
         this.pack();
 
         this.setVisible(true);

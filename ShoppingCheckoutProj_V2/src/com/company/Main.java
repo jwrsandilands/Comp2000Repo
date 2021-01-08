@@ -39,10 +39,10 @@ public class Main {
         AdminView adminOrderView = new OrderView();
         IAdminController adminOrderControl = new Controller(model, adminOrderView);
 
-        KioskView kisokScanView = new ScanView();
-        IUserController kioskScanControl = new Controller(model, kisokScanView);
+        KioskView kioskScanView = new ScanView();
+        IUserController kioskScanControl = new Controller(model, kioskScanView);
 
         KioskView kioskPayView = new PayView();
-        IUserController kioskPayControl = new Controller(model, kisokScanView);
+        IUserController kioskPayControl = new Controller(model, kioskScanView);
     }
 }
