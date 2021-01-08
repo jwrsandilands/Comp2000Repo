@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Model implements IModelSubject {
     public List<IModelObserver> iModelObserver = new ArrayList<IModelObserver> ();
     private final ArrayList<ModelStockEntry> stockTable = new ArrayList<ModelStockEntry>();
-    private final ArrayList<ModelAdminDataEntry> adminTable = new ArrayList<ModelAdminDataEntry>();
+    private ArrayList<ModelAdminDataEntry> adminTable = new ArrayList<ModelAdminDataEntry>();
 
     //establish variables
     public String separator = "\\|";
@@ -31,7 +31,7 @@ public class Model implements IModelSubject {
 
             Scanner stockScanner = new Scanner(stockData);
             while (stockScanner.hasNextLine()) {
-                //scans the next line to scan
+                //finds the next line to scan
                 String data = stockScanner.nextLine();
 
                 //breaks line data into an array
@@ -72,13 +72,13 @@ public class Model implements IModelSubject {
     }
 
     //read admin file
-    public void loadAdmins(){
-        try{
+    public void loadAdmins() {
+        try {
             File adminData = new File(adminDataFilePath);
 
             Scanner adminScanner = new Scanner(adminData);
             while (adminScanner.hasNextLine()) {
-                //scans the next line to scan
+                //finds the next line to scan
                 String data = adminScanner.nextLine();
 
                 //breaks line data into an array
@@ -102,11 +102,13 @@ public class Model implements IModelSubject {
             adminScanner.close();
 
             System.out.println("Admin Import Successful!");
-        }
-        catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("Admin Import Unsuccessful... \n please check file location and properties.");
             e.printStackTrace();
         }
     }
+        public ArrayList<ModelAdminDataEntry> getAdminData(){
+        return adminTable;
+        }
 
 }
