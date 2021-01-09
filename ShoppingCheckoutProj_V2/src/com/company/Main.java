@@ -6,7 +6,6 @@ import com.CWProgram.Controller.IUserController;
 import com.CWProgram.Model.IModelSubject;
 import com.CWProgram.Model.Model;
 import com.CWProgram.View.AdminView.AdminView;
-import com.CWProgram.View.AdminView.LoginView;
 import com.CWProgram.View.AdminView.OrderView;
 import com.CWProgram.View.AdminView.StockView;
 import com.CWProgram.View.KioskView.KioskView;
@@ -30,8 +29,8 @@ public class Main {
         }
 
 
-        AdminView adminLoginView = new LoginView();
-        IAdminController adminLoginControl = new Controller(model, adminLoginView);
+//        AdminView adminLoginView = new LoginView();
+//        IAdminController adminLoginControl = new Controller(model, adminLoginView);
 
         AdminView adminStockView = new StockView();
         IAdminController adminStockControl = new Controller(model, adminStockView);

@@ -10,7 +10,7 @@ public abstract class AdminView extends JFrame implements IView{
     protected Controller controller;
 
     protected void initialiseGrid(int rows, int cols){
-        this.setLayout(new GridLayout(rows,cols));
+        this.setLayout(new GridLayout(rows,cols, 2, 2));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setPreferredSize(new Dimension(200,200));
         this.pack();
