@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Method;
 
 public class ScanView extends KioskView {
 
@@ -42,11 +43,14 @@ public class ScanView extends KioskView {
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        startBtn.setEnabled(false);
-                        adminBtn.setEnabled(false);
-                        mainPanel.setEnabled(false);
-
                         Model model = new Model();
+                        try{
+                            Method method = model.getClass().getMethod("loadAdmins");
+                            method.invoke(model);
+                        }
+                        catch(Exception ex){
+                            System.out.println("Error Importing!");
+                        }
                         AdminView adminLoginView = new LoginView();
                         IAdminController adminLoginControl = new Controller(model, adminLoginView);
                     }

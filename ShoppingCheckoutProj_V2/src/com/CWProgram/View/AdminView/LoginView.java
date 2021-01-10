@@ -12,7 +12,7 @@ public class LoginView extends AdminView {
     JLabel usernameTxt, passwordTxt;
     JTextField usernameIn;
     JPasswordField passwordIn;
-    JButton enterButton;
+    JButton enterButton, backButton;
     JSeparator separator;
     EmptyBorder mainBorder;
     int nameCounter = 0, passCounter = 0;
@@ -78,6 +78,16 @@ public class LoginView extends AdminView {
                 }
         );
 
+        backButton = new JButton("Back");
+        backButton.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        closeLogin();
+                    }
+                }
+        );
+
         enterButton = new JButton("Enter");
         enterButton.addActionListener(
                 e -> {
@@ -97,13 +107,13 @@ public class LoginView extends AdminView {
         mainPanel.add(usernameIn);
         mainPanel.add(passwordTxt);
         mainPanel.add(passwordIn);
-        mainPanel.add(separator);
+        mainPanel.add(backButton);
         mainPanel.add(enterButton);
 
         mainPanel.setBorder(mainBorder);
 
         setContentPane(mainPanel);
 
-        initialiseGrid(3,2);
+        initialiseLogin(3,2);
     }
 }

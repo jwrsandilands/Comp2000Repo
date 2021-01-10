@@ -72,9 +72,11 @@ public class Controller implements IAdminController, IUserController, IModelObse
 
 			//if username and password are right then say so
 			if(trueUser && truePass) {
+				System.out.println("Answer is true!");
 				return true;
 			}
 			else{
+				System.out.println("Answer is false!");
 				return false;
 			}
 		}
