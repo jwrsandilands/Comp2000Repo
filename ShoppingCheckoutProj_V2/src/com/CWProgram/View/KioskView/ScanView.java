@@ -16,10 +16,13 @@ import java.lang.reflect.Method;
 
 public class ScanView extends KioskView {
 
-    JPanel mainPanel, scanPanel;
+    JPanel mainPanel, scanPanel, itemPanel;
 
-    JLabel promptTxt;
+    JLabel promptTxt, scannedItemTxt, scannedCostTxt;
     JButton startBtn, adminBtn;
+    JTable scanTable;
+    String[] tableHeads;
+    Object[][] tableContents;
 
     EmptyBorder mainBorder;
 
@@ -27,8 +30,14 @@ public class ScanView extends KioskView {
     public ScanView(){
         mainPanel = new JPanel();
         scanPanel = new JPanel();
+        itemPanel = new JPanel();
         promptTxt = new JLabel("Press the Button to Start!");
         promptTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
+        scannedItemTxt = new JLabel("Scan an item!");
+        scannedItemTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
+        scannedCostTxt = new JLabel("temp");
+        scannedCostTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
+
         startBtn = new JButton("Start");
         startBtn.addActionListener(
                 new ActionListener() {
@@ -57,9 +66,15 @@ public class ScanView extends KioskView {
                 }
         );
 
+        tableHeads = new String[]{"Name", "Price"};
+        tableContents = new Object[][]{
+                {"Beans", (float) 0.99}, {"Crisps", (float) 1.20}
+        };
+        scanTable = new JTable(tableContents, tableHeads);
+
         mainBorder = new EmptyBorder(10,10,10,10);
         mainPanel.setBorder(mainBorder);
-
+        itemPanel.setBorder(mainBorder);
         scanPanel.setBorder(mainBorder);
 
         mainPane();
@@ -116,11 +131,21 @@ public class ScanView extends KioskView {
     }
 
     public void scanPane(){
+        itemPanel.add(scannedItemTxt);
+        itemPanel.add(scannedCostTxt);
+
+        itemPanel.setLayout(new GridLayout(1,2,1,1));
+        setContentPane(itemPanel);
+        setVisible(true);
 
         scanPanel.add(promptTxt);
+        scanPanel.add(scanTable);
+        scanPanel.setLayout(new GridLayout(2,1,1,1));
+//        setContentPane(scanPanel);
+//        getContentPane().add(scanPanel);
 
-        setContentPane(scanPanel);
-        initialise(3,3);
+        initialise2(itemPanel, scanPanel);
+
     }
 
 }
