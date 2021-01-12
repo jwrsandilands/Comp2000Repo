@@ -3,6 +3,7 @@ package com.CWProgram.Controller;
 import com.CWProgram.Model.IModelObserver;
 import com.CWProgram.Model.IModelSubject;
 import com.CWProgram.Model.ModelAdminDataEntry;
+import com.CWProgram.Model.ModelStockEntry;
 import com.CWProgram.View.IView;
 
 import java.lang.reflect.Method;
@@ -85,6 +86,21 @@ public class Controller implements IAdminController, IUserController, IModelObse
 			System.out.println("An unexpected error has occurred!");
 			return false;
 		}
+	}
+
+	public ModelStockEntry itemInStock(int IDValue){
+		try{
+			Method method = iModelSubject.getClass().getDeclaredMethod("getStockTable");
+			ArrayList<ModelStockEntry> stockTable = new ArrayList<ModelStockEntry>();
+			stockTable = (ArrayList<ModelStockEntry>) method.invoke(iModelSubject);
+
+			return stockTable.get(IDValue);
+		}
+		catch(Exception unexpected){
+			System.out.println("An unexpected error has occurred!");
+			return null;
+		}
+
 	}
 
 }

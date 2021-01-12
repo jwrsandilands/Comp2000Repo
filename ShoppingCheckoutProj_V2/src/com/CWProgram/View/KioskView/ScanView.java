@@ -4,25 +4,33 @@ package com.CWProgram.View.KioskView;
 import com.CWProgram.Controller.Controller;
 import com.CWProgram.Controller.IAdminController;
 import com.CWProgram.Model.Model;
+import com.CWProgram.Model.ModelStockEntry;
 import com.CWProgram.View.AdminView.AdminView;
 import com.CWProgram.View.AdminView.LoginView;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.lang.reflect.Method;
 
 public class ScanView extends KioskView {
 
-    JPanel mainPanel, scanPanel, itemPanel;
+    JPanel mainPanel, scanPanel, itemPanel, backPanel, blankPanel;
 
-    JLabel promptTxt, scannedItemTxt, scannedCostTxt;
-    JButton startBtn, adminBtn;
+    JLabel promptTxt, scannedItemTxt, scannedCostTxt, totalTxt;
+    JButton startBtn, adminBtn, payBtn, backBtn, scanBtn;
+    JTextField scanInput;
     JTable scanTable;
+
+    String inScan;
+    int inNumber;
+
     String[] tableHeads;
-    Object[][] tableContents;
+    Object[][] tableContents, newArray;
+
+    ModelStockEntry shopItem;
+    String itemName;
+    float itemPrice;
 
     EmptyBorder mainBorder;
 
@@ -31,121 +39,186 @@ public class ScanView extends KioskView {
         mainPanel = new JPanel();
         scanPanel = new JPanel();
         itemPanel = new JPanel();
+        backPanel = new JPanel();
+        blankPanel = new JPanel();
         promptTxt = new JLabel("Press the Button to Start!");
         promptTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
         scannedItemTxt = new JLabel("Scan an item!");
         scannedItemTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
         scannedCostTxt = new JLabel("temp");
         scannedCostTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
+        totalTxt = new JLabel("Total: 0.00");
+        totalTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
 
         startBtn = new JButton("Start");
         startBtn.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        scanPane();
-                    }
-                }
+                e -> scanPane()
         );
         adminBtn = new JButton("Admin Login");
         adminBtn.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        Model model = new Model();
+                e -> {
+                    Model model = new Model();
+                    try{
+                        Method method = model.getClass().getMethod("loadAdmins");
+                        method.invoke(model);
+                    }
+                    catch(Exception ex){
+                        System.out.println("Error Importing!");
+                    }
+                    AdminView adminLoginView = new LoginView();
+                    IAdminController adminLoginControl = new Controller(model, adminLoginView);
+                }
+        );
+
+        payBtn = new JButton("Finish & Pay");
+        payBtn.addActionListener(
+                e -> {
+                    if (tableContents != null){
+
+                    }
+                }
+        );
+        backBtn = new JButton("Back");
+        backBtn.addActionListener(
+                e -> {
+                    dispose();
+                    new ScanView();
+                }
+        );
+
+        scanInput = new JTextField();
+        scanBtn = new JButton("scan");
+        scanBtn. addActionListener(
+                e -> {
+                    if(scanInput != null){
+                        int n = 0;
+                        inScan = scanInput.getText();
                         try{
-                            Method method = model.getClass().getMethod("loadAdmins");
-                            method.invoke(model);
+                            inNumber = Integer.parseInt(inScan);
                         }
-                        catch(Exception ex){
-                            System.out.println("Error Importing!");
+                        catch(Exception intError){
+                            System.out.println("Not an Int!");
                         }
-                        AdminView adminLoginView = new LoginView();
-                        IAdminController adminLoginControl = new Controller(model, adminLoginView);
+
+                        shopItem = controller.itemInStock(inNumber);
+                        itemName = shopItem.getDescription();
+                        itemPrice = shopItem.getPrice();
+
+                        scannedItemTxt.setText(itemName);
+                        scannedCostTxt.setText(String.valueOf(itemPrice));
+
+                        newArray = new Object[tableContents.length + 1][2];
+
+                        while(n <= tableContents.length -1){
+                            newArray[n][0] = tableContents[n][0];
+                            newArray[n][1] = tableContents[n][1];
+                            n++;
+                        }
+
+                        newArray[n][0] = itemName;
+                        newArray[n][1] = itemPrice;
+
+                        tableContents = newArray;
+
+                        scanTable = new JTable(tableContents, tableHeads);
+                        scannedItemsPanel();
                     }
                 }
         );
 
         tableHeads = new String[]{"Name", "Price"};
-        tableContents = new Object[][]{
-                {"Beans", (float) 0.99}, {"Crisps", (float) 1.20}
-        };
+        tableContents = new Object[][]{};
         scanTable = new JTable(tableContents, tableHeads);
 
         mainBorder = new EmptyBorder(10,10,10,10);
         mainPanel.setBorder(mainBorder);
         itemPanel.setBorder(mainBorder);
         scanPanel.setBorder(mainBorder);
+        backPanel.setBorder(mainBorder);
 
         mainPane();
     }
 
     public void mainPane(){
-        //manipulate gridlayout shape
-        {
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
+            //manipulate gridlayout shape
+            {
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
 
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
 
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(promptTxt);
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(promptTxt);
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
 
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(startBtn);
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(startBtn);
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
 
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
 
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
 
-            mainPanel.add(adminBtn);
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-            mainPanel.add(new JLabel());
-        }
-
+                mainPanel.add(adminBtn);
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+                mainPanel.add(new JLabel());
+            }
         setContentPane(mainPanel);
         initialise(7,5);
     }
 
     public void scanPane(){
+        setContentPane(blankPanel);
         itemPanel.add(scannedItemTxt);
         itemPanel.add(scannedCostTxt);
+        itemPanel.add(scanInput);
+        itemPanel.add(scanBtn);
 
-        itemPanel.setLayout(new GridLayout(1,2,1,1));
-        setContentPane(itemPanel);
+        itemPanel.setLayout(new GridLayout(2,2,1,1));
+//        setContentPane(itemPanel);
         setVisible(true);
 
-        scanPanel.add(promptTxt);
-        scanPanel.add(scanTable);
-        scanPanel.setLayout(new GridLayout(2,1,1,1));
+        promptTxt.setText("Scanned Items:");
+        scannedItemsPanel();
+
 //        setContentPane(scanPanel);
 //        getContentPane().add(scanPanel);
 
-        initialise2(itemPanel, scanPanel);
+        backPanel.add(backBtn);
+        backPanel.setLayout(new GridLayout(1,1,1,1));
 
+        initialise2(itemPanel, scanPanel, backPanel);
+
+    }
+
+    public void scannedItemsPanel(){
+        scanPanel.removeAll();
+        scanPanel.add(promptTxt);
+        scanPanel.add(scanTable);
+        scanPanel.add(totalTxt);
+        scanPanel.add(payBtn);
+        scanPanel.setLayout(new GridLayout(4,1,1,1));
     }
 
 }

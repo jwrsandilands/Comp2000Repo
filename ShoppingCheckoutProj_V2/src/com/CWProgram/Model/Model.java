@@ -107,8 +107,12 @@ public class Model implements IModelSubject {
             e.printStackTrace();
         }
     }
-        public ArrayList<ModelAdminDataEntry> getAdminData(){
-        return adminTable;
-        }
 
+    public ArrayList<ModelAdminDataEntry> getAdminData(){
+        return adminTable;
+    }
+
+    public ArrayList<ModelStockEntry> getStockTable(){
+        return stockTable;
+    }
 }

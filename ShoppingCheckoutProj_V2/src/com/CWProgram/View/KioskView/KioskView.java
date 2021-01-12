@@ -18,11 +18,13 @@ public abstract class KioskView extends JFrame implements IView {
         this.setVisible(true);
     }
 
-    protected void initialise2(JPanel panel1,JPanel panel2){
+    protected void initialise2(JPanel panel1,JPanel panel2, JPanel panel3){
         this.setLayout(null);
         this.setLayout(new BorderLayout());
-//        this.add(panel1, BorderLayout.WEST);
+        this.add(panel1, BorderLayout.CENTER);
         this.add(panel2, BorderLayout.EAST);
+        panel3.setPreferredSize(new Dimension (1500, 100));
+        this.add(panel3, BorderLayout.SOUTH);
         this.pack();
 
         this.setVisible(true);

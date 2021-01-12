@@ -27,6 +27,13 @@ public class Main {
         catch(Exception ex){
 
         }
+        try{
+            Method method = model.getClass().getMethod("loadStock");
+            method.invoke(model);
+        }
+        catch(Exception ex){
+
+        }
 
 
 //        AdminView adminLoginView = new LoginView();
