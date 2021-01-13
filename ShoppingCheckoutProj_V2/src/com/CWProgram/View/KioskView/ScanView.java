@@ -14,6 +14,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.lang.reflect.Method;
+import java.text.DecimalFormat;
 
 public class ScanView extends KioskView {
 
@@ -32,9 +33,11 @@ public class ScanView extends KioskView {
 
     ModelStockEntry shopItem;
     String itemName;
-    float itemPrice;
+    float itemPrice, totalPrice = 0;
 
     EmptyBorder mainBorder;
+
+    DecimalFormat price = new DecimalFormat("0.00");
 
 
     public ScanView(){
@@ -49,7 +52,7 @@ public class ScanView extends KioskView {
         scannedItemTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
         scannedCostTxt = new JLabel("");
         scannedCostTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
-        totalTxt = new JLabel("Total: 0.00");
+        totalTxt = new JLabel("Total: £0.00");
         totalTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
 
         startBtn = new JButton("Start");
@@ -130,7 +133,10 @@ public class ScanView extends KioskView {
                         itemPrice = shopItem.getPrice();
 
                         scannedItemTxt.setText(itemName);
-                        scannedCostTxt.setText(String.valueOf(itemPrice));
+                        scannedCostTxt.setText("£" + price.format(itemPrice));
+
+                        totalPrice = totalPrice + itemPrice;
+                        totalTxt.setText("£" + price.format(totalPrice));
 
                         newArray = new Object[tableContents.length + 1][2];
 
@@ -141,7 +147,7 @@ public class ScanView extends KioskView {
                         }
 
                         newArray[n][0] = itemName;
-                        newArray[n][1] = itemPrice;
+                        newArray[n][1] = "£" + price.format(itemPrice);
 
                         tableContents = newArray;
 

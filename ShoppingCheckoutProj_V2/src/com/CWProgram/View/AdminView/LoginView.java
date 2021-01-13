@@ -94,6 +94,9 @@ public class LoginView extends AdminView {
                         closeLogin();
 
                         dispose();
+                        for (Window window: java.awt.Window.getWindows()) {
+                            window.dispose();
+                        }
 
                         IModelSubject model = new Model();
                         try{
