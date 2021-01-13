@@ -1,9 +1,17 @@
 package com.CWProgram.View.AdminView;
 
+import com.CWProgram.Controller.Controller;
+import com.CWProgram.Controller.IUserController;
+import com.CWProgram.Model.IModelSubject;
+import com.CWProgram.Model.Model;
+import com.CWProgram.View.KioskView.KioskView;
+import com.CWProgram.View.KioskView.ScanView;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
+import java.lang.reflect.Method;
 
 public class LoginView extends AdminView {
 
@@ -84,6 +92,27 @@ public class LoginView extends AdminView {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         closeLogin();
+
+                        dispose();
+
+                        IModelSubject model = new Model();
+                        try{
+                            Method method = model.getClass().getMethod("loadAdmins");
+                            method.invoke(model);
+                        }
+                        catch(Exception ex){
+
+                        }
+                        try{
+                            Method method = model.getClass().getMethod("loadStock");
+                            method.invoke(model);
+                        }
+                        catch(Exception ex){
+
+                        }
+
+                        KioskView kioskScanView = new ScanView();
+                        IUserController kioskScanControl = new Controller(model, kioskScanView);
                     }
                 }
         );

@@ -3,6 +3,8 @@ package com.CWProgram.View.KioskView;
 
 import com.CWProgram.Controller.Controller;
 import com.CWProgram.Controller.IAdminController;
+import com.CWProgram.Controller.IUserController;
+import com.CWProgram.Model.IModelSubject;
 import com.CWProgram.Model.Model;
 import com.CWProgram.Model.ModelStockEntry;
 import com.CWProgram.View.AdminView.AdminView;
@@ -45,7 +47,7 @@ public class ScanView extends KioskView {
         promptTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
         scannedItemTxt = new JLabel("Scan an item!");
         scannedItemTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
-        scannedCostTxt = new JLabel("temp");
+        scannedCostTxt = new JLabel("");
         scannedCostTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
         totalTxt = new JLabel("Total: 0.00");
         totalTxt.setFont(new Font(promptTxt.getFont().getName(), Font.PLAIN, 25));
@@ -67,6 +69,11 @@ public class ScanView extends KioskView {
                     }
                     AdminView adminLoginView = new LoginView();
                     IAdminController adminLoginControl = new Controller(model, adminLoginView);
+
+                    adminBtn.setEnabled(false);
+                    startBtn.setEnabled(false);
+                    promptTxt.setEnabled(false);
+                    this.setEnabled(false);
                 }
         );
 
@@ -82,7 +89,25 @@ public class ScanView extends KioskView {
         backBtn.addActionListener(
                 e -> {
                     dispose();
-                    new ScanView();
+
+                    IModelSubject model = new Model();
+                    try{
+                        Method method = model.getClass().getMethod("loadAdmins");
+                        method.invoke(model);
+                    }
+                    catch(Exception ex){
+
+                    }
+                    try{
+                        Method method = model.getClass().getMethod("loadStock");
+                        method.invoke(model);
+                    }
+                    catch(Exception ex){
+
+                    }
+
+                    KioskView kioskScanView = new ScanView();
+                    IUserController kioskScanControl = new Controller(model, kioskScanView);
                 }
         );
 
@@ -90,7 +115,7 @@ public class ScanView extends KioskView {
         scanBtn = new JButton("scan");
         scanBtn. addActionListener(
                 e -> {
-                    if(scanInput != null){
+                    if(!scanInput.getText().equals("")){
                         int n = 0;
                         inScan = scanInput.getText();
                         try{
